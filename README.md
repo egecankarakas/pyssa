@@ -1,1 +1,1 @@
-# pyssa
+# pyssa - Python Security Static Analyzer
