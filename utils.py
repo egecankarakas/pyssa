@@ -656,7 +656,7 @@ def f1_loss(y_true, y_pred):
     r = tp / (tp + fn + K.epsilon())
 
     f1 = 2*p*r / (p+r+K.epsilon())
-    f1 = tf.where(tf.is_nan(f1), tf.zeros_like(f1), f1)
+    f1 = tf.where(tf.math.is_nan(f1), tf.zeros_like(f1), f1)
     return 1 - K.mean(f1)
   
   
@@ -1034,3 +1034,6 @@ def getFromDataset(identifying,data):
   elif not filefound:
     print("File found " + str(filefound))
   return []
+
+
+#This is the new file
